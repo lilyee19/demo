@@ -21,12 +21,12 @@ public class TestController {
 		
 		@GetMapping("/test")
 		public ResponseEntity<?>testTodo(){
-			String str = service.testService();
-			List<String> list =new ArrayList<>();
-			list.add(str);
-			ResponseDTO<String> response = 
+				String str = service.testService();
+				List<String> list =new ArrayList<>();
+				list.add(str);
+				ResponseDTO<String> response = 
 ResponseDTO.<String>builder().data(list).build();
-			  return ResponseEntity.ok().body(response);
+				return ResponseEntity.ok().body(response);
 		}
 		
 }
